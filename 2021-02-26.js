@@ -1,19 +1,8 @@
 // https://programmers.co.kr/learn/courses/30/lessons/72410?language=javascript
 function solution(new_id) {
 
-  var answer = (new_id||"").toLowerCase();
-  answer = answer.replace(/[^a-z0-9\-_\.]/g, "", -1)
-  answer = answer.replace(/\.{2,}/g, ".", -1)
-  answer = answer.replace(/^\.|\.$/g, "", -1)
-  if (!answer || answer.length < 1) {
-    answer = "a"
-  }
-
-  if (answer.length > 15) {
-    answer = answer.substring(0, 15)
-  }
-
-  answer = answer.replace(/\.$/g, "", -1)
+  var answer = (new_id||"").toLowerCase().replace(/[^a-z0-9\-_\.]/g, "").replace(/\.{2,}/g, ".")
+  .replace(/^\.|\.$/g, "").replace(/^$/, "a").slice(0, 15).replace(/\.$/g, "")
 
   switch(answer.length) {
     case 1:
