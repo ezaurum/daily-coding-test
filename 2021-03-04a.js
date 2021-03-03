@@ -1,4 +1,5 @@
 // https://programmers.co.kr/learn/courses/30/lessons/12904#
+// https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
 
 function check2(s, center, length) {    
     // const isEven =  (length - center - 1) < center ? (length - center - 1) % 2 === 0 : center % 2 === 0
